@@ -1,0 +1,30 @@
+@use 'vars.scss';
+
+.title {
+    font-size: var(--lg);
+    margin-bottom: 20px;
+    margin-top: 16px;
+    padding-left: 20px;
+  }
+  .my-order-container {
+    width: 360px;
+    position: absolute;
+    right: 8em;
+    top: 100px;
+    border-radius: 5px;
+    
+    box-shadow: 0px 0px 14px 1px rgb(213, 215, 223);
+    -webkit-box-shadow: 1px 14px 28px 1px hsl(227, 16%, 83%);
+  
+    background: var(--White) ;
+    
+  }
+  .my-order-content {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--Grayish-blue);
+    padding: 20px;
+  }
+  .cartEmpty{
+    padding: 26px 0px 26px 90px ;
+  }

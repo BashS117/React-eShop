@@ -1,0 +1,75 @@
+@use'vars.scss';
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 36px;
+    padding-top: 22px;
+    border-bottom: 1px solid var(--Grayish-blue);
+  }
+  .menu {
+    display: none;
+  }
+  .logo {
+    width: 120px;
+    height: 22px;
+  }
+  .navbar-left ul,
+  .navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-left ul {
+    margin-left: 42px;
+  }
+  .navbar-left ul li a,
+  .navbar-right ul li a {
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+    border: 1px solid var(--white);
+    padding: 0px 15px 0 15px;
+    border-radius: 8px;
+  }
+  .navbar-left ul li a:hover,
+  .navbar-right ul li a:hover {
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+  }
+  .navbar-email {
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    margin-right: 12px;
+  }
+  .navbar-shopping-cart {
+    position: relative;
+    cursor: pointer;
+  }
+  .navbar-shopping-cart div {
+    width: 16px;
+    height: 16px;
+    background-color: var(--Orange);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .user-icon{
+    padding-left: 44px;
+  }
+  .user-icon img{
+    width: 48px;
+    height: 48px;
+  }
