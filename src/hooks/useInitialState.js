@@ -8,10 +8,15 @@ const useInitialState = ( )=>{
     const [state, setState]=useState(initialState);
 
 
-    const addToCart = (payload)=>{
+    const addToCart = (product,amount)=>{
+const cartItemProduct = {
+    ...product,
+    amount
+};
         setState({
             ...state,
-            cart: [...state.cart, payload]
+            cart: [...state.cart, cartItemProduct],
+            
         });
     };
 
@@ -22,11 +27,8 @@ const useInitialState = ( )=>{
         })
     };
 
-    const [showInf, setInf]=useState({});
 
-    const addInf= (item)=>{
-            setInf(item);
-    }
+    const [amount, setAmount]= useState(1);
 
 
 
@@ -35,8 +37,9 @@ const useInitialState = ( )=>{
         state,
         addToCart, 
         removeFromCart,
-        showInf,
-        addInf
+        amount,
+        setAmount
+        
     }
 
 

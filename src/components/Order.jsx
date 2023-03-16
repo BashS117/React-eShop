@@ -4,8 +4,7 @@ import iconDelete from '../assets/images/icon-delete.svg';
 import AppContext from '../context/AppContext';
 
 const Order = ({cartItem}) => {
-const {removeFromCart}= useContext(AppContext);
-
+const {removeFromCart,}= useContext(AppContext);
 
 const handleRemove = cartItem =>{
   removeFromCart(cartItem);
@@ -25,8 +24,8 @@ const handleRemove = cartItem =>{
             </p>
             <div className="value-items">
               <span>{cartItem.price}</span>
-              <span>X 3</span>
-              <p>$375.00</p>
+              <span>X {cartItem.amount}</span>
+              <p>${cartItem.price*cartItem.amount}</p>
             </div>
           </div>
           <img 
