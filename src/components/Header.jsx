@@ -1,12 +1,25 @@
-import React from 'react';
+import React,{useState, useContext} from 'react';
 import '../styles/Header.scss'
 import MyOrder from '../containers/MyOrder';
+
+import logo from '../assets/images/logo.svg';
+import shopingCartIcon from '../assets/images/icon-cart.svg';
+import imageaAvatar from '../assets/images/image-avatar.png'
+
+import AppContext from '../context/AppContext';
+
 const Header = () => {
+    const [toggle, setToggle]=useState(false);
+    const {state}= useContext(AppContext);
+
+    const handleToggle = ()=>{
+      setToggle(!toggle);
+    }
     return (
         <nav>
 
             <div className="navbar-left">
-                <img src="./assets/logo.svg" alt="logo" className="logo" />
+                <img src={logo} alt="logo" className="logo" />
 
                 <ul>
                     <li>
@@ -30,17 +43,16 @@ const Header = () => {
             <div className="navbar-right">
 
                 <ul>
-                    <li className="navbar-shopping-cart">
-                        <img src="./assets/icon-cart.svg" alt="shopping cart" />
-                        <div>2</div>
-                    </li>
+                    <li onClick={()=>handleToggle()} className="navbar-shopping-cart">
+                        <img  src={shopingCartIcon} alt="shopping cart" />
+                        {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}                   </li>
                     <li className="user-icon">
-                        <img src="./assets/image-avatar.png" alt="user-icon" />
+                        <img src={imageaAvatar} alt="user-icon" />
                     </li>
                 </ul>
             </div>
-
-<MyOrder/>
+            {/* shoopingCart(My Order) */}
+            {toggle && <MyOrder />}
         </nav>
 
     );

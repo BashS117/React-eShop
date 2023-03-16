@@ -4,7 +4,7 @@
 .product-item {
     width: 240px;
   }
-  .product-item img {
+  .product-item-image{
     width: 240px;
     height: 240px;
     border-radius: 20px;
@@ -20,9 +20,8 @@
   .product-card-info figure {
     margin: 0;
   }
-  .product-card-info figure img {
-    width: 35px;
-    height: 35px;
+  .add-to-cart-icon {
+    height: 40px;
   }
   .product-card-info div p:nth-child(1) {
     font-weight: bold;

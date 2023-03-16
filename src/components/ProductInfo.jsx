@@ -1,11 +1,14 @@
 import React from 'react';
-import '../styles/ProductInfo.scss'
-const ProductInfo = () => {
+
+import '../styles/ProductInfo.scss';
+
+const ProductInfo = ({product}) => {
+
     return (
         <div className="product-info  inactive">
             <div className="product-visualitation">
 
-                <img src="./assets/image-product-1.jpg" alt="bike" />
+                <img src={""} alt="bike" />
                 <div className="product-images-container">
                     <img className="img-product-button" src="./assets/image-product-1-thumbnail.jpg" alt="" />
                     <img className="img-product-button" src="./assets/image-product-2-thumbnail.jpg" alt="" />

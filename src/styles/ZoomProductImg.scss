@@ -1,9 +1,8 @@
 @use 'vars.scss';
 
-
 .close-icon-container{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     position: relative;
     top: 34px;
   }

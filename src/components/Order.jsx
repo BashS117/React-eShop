@@ -1,28 +1,41 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import '../styles/Order.scss';
-const Order = () => {
-    return (
-        <div class="my-order-content">
-                      <p className="cartEmpty"> Your cart is empty</p>
+import iconDelete from '../assets/images/icon-delete.svg';
+import AppContext from '../context/AppContext';
 
-        <div class="order">
+const Order = ({cartItem}) => {
+const {removeFromCart}= useContext(AppContext);
+
+
+const handleRemove = cartItem =>{
+  removeFromCart(cartItem);
+}
+
+    return (
+        <div className="my-order-content">
+                 
+
+        <div className="order">
           <figure>
-            <img class="img-product-cart" src="./assets/image-product-1-thumbnail.jpg" alt=""/>
+            <img className="img-product-cart" src={cartItem.images[0]} alt={cartItem.title}/>
           </figure>
-          <div class="info-item-container">
+          <div className="info-item-container">
             <p>
-              Fall Limited Edition sneaker
+              {cartItem.title}
             </p>
-            <div class="value-items">
-              <span>$125.00</span>
+            <div className="value-items">
+              <span>{cartItem.price}</span>
               <span>X 3</span>
               <p>$375.00</p>
             </div>
           </div>
-          <img class="delete-icon" src="./assets/icon-delete.svg" alt="arrow"/>
+          <img 
+          onClick={()=>handleRemove(cartItem)}
+          className="delete-icon" 
+          src={iconDelete} alt="arrow"/>
         </div>
       
-        <button class="checkout-button">Checkout</button>
+        <button className="checkout-button">Checkout</button>
       
       </div>
 

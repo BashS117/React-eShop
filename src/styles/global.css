@@ -1,27 +1,4 @@
-:root {
-    -black: #000000;
-    -very-light-pink: #C7C7C7;
-    -text-input-field: #F7F7F7;
-    -hospital-green: #ACD9B2;
-    -sm: 14px;
-    -md: 16px;
-    -lg: 18px;
 
-    /* ### Primary */
-
-    -Orange: hsl(26, 100%, 55%);
-    -Pale-orange: hsl(25, 100%, 94%);
-
-/* ### Neutral */
-
-    -Very-dark-blue: hsl(220, 13%, 13%);  
-    -Dark-grayish-blue: hsl(219, 9%, 45%);
-    -Grayish-blue: hsl(220, 14%, 75%);
-    -Light-grayish-blue: hsl(223, 64%, 98%);
-    -White: #FFFFFF;
-    -black: (with 75% opacity for lightbox background)hsl(0, 0%, 0%);
-
-  }
   body {
     margin: 0;
     font-family: 'Kumbh Sans', sans-serif;

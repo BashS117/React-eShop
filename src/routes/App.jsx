@@ -6,14 +6,19 @@ import ProductDetail from '../containers/ProductDetail';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import ProductList from '../containers/ProductList';
+import AppContext from '../context/AppContext';
+import useInitialState from '../hooks/useInitialState';
+
 function App() {
+  const initialState= useInitialState();
   return (
+    <AppContext.Provider value={initialState} >
     <BrowserRouter>
     <Layout>
     <Routes>
     
       <Route exact path= "/" element={<Home/>}/>
-      <Route exact path= "/ProductDetail" element={<ProductDetail/>}/>
+      <Route exact path="/ProductDetail" element={<ProductDetail />} />   
       <Route exact path= "/ProductList" element={<ProductList/>}/>
 
       <Route  element={<NotFound/>}/>
@@ -21,6 +26,7 @@ function App() {
     </Routes>
     </Layout>
     </BrowserRouter>
+    </AppContext.Provider>
     
   );
 }
