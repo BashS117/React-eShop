@@ -6,9 +6,6 @@ nav {
     padding-top: 22px;
     border-bottom: 1px solid var(--Grayish-blue);
   }
-  .menu {
-    display: none;
-  }
   .logo {
     width: 120px;
     height: 22px;
@@ -21,14 +18,13 @@ nav {
     display: flex;
     align-items: center;
     height: 60px;
+    margin-left: 42px; 
   }
   .navbar-left {
     display: flex;
     align-items: center;
   }
-  .navbar-left ul {
-    margin-left: 42px;
-  }
+ 
   .navbar-left ul li a,
   .navbar-right ul li a {
     text-decoration: none;
@@ -39,13 +35,8 @@ nav {
   }
   .navbar-left ul li a:hover,
   .navbar-right ul li a:hover {
-    border: 1px solid var(--hospital-green);
-    color: var(--hospital-green);
-  }
-  .navbar-email {
-    color: var(--very-light-pink);
-    font-size: var(--sm);
-    margin-right: 12px;
+    border: 1px solid var(--Orange);
+    color: var(--Orange);
   }
   .navbar-shopping-cart {
     position: relative;
@@ -72,4 +63,5 @@ nav {
   .user-icon img{
     width: 48px;
     height: 48px;
+    cursor: pointer;
   }

@@ -15,7 +15,7 @@ const ProductInfo = ({product}) => {
 
 
     return (
-        <div className="product-info  inactive">
+        <div className="product-info  ">
             <div className="product-visualitation">
 
                 <img src={product.images[0]} alt="bike" />

@@ -16,7 +16,7 @@ const MyOrder = () => {
       <div className="my-order-container  inactive">
         <h1 className="title">Cart</h1>
 
-        {state.cart.length === 0 && <p>Your cart is empty</p>}
+        {state.cart.length === 0 && <p className='empty-cart'>Your cart is empty</p>}
 
         {state.cart.map(cartItem => (
           <Order 
@@ -24,12 +24,19 @@ const MyOrder = () => {
           key={`orderITEM-${cartItem.id}`}
            />
         ))}
-<p>
-  <span>Total</span>
-</p>
-<p>${sumTotal()}</p>
 
-<button className="checkout-button">Checkout</button>
+        <div className='my-order-total-container' >
+          <div className='my-order-total' >
+          <p>
+            <span>Total</span>
+          </p>
+          <p>${sumTotal()}</p>
+          </div>
+
+          <button className="checkout-button checkout-total-button ">Checkout</button>
+
+        </div>
+
 
 
 
