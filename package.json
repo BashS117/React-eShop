@@ -58,6 +58,5 @@
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
     "util": "^0.12.5"
-  },
-  "homepage": "https://BashS117.github.io/"
+  }
 }
