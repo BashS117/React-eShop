@@ -13,7 +13,7 @@ function App() {
   const initialState= useInitialState();
   return (
     <AppContext.Provider value={initialState} >
-    <BrowserRouter>
+    <BrowserRouter basename='/react-eshop'>
     <Layout>
     <Routes>
     
