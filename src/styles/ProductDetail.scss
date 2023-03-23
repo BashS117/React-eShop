@@ -1,2 +1,11 @@
 @use 'vars.scss';
 
+.ProductDetail-close{
+    position: fixed;
+    background:var(--Orange);
+    width: 28px;
+    height: 60px;
+    padding-top: 38px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
